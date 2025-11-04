@@ -107,8 +107,8 @@ h6 {
   font-variant-alternates: styleset(alt-l);
 
   font-weight: 600;
-  margin-top: 1rem;
-  margin-bottom: 0.2rem;
+  margin-top: 1em;
+  margin-bottom: 0.2em;
   text-wrap: balance;
   line-height: 1.1;
 }
@@ -121,10 +121,86 @@ h2 {
   font-size: 1.5rem;
 }
 
+h3 {
+  font-size: 1rem;
+}
+
+hr {
+  border: none;
+  height: 0.1rem;
+
+  background-color: var(--color-black);
+
+  margin-top: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 header,
 main {
   width: 92%;
   max-width: 38rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+header {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+:root {
+  --grid-item-column-span: 1;
+  --grid-columns-count: 12;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns-count), 1fr);
+  grid-column-gap: 0.5rem;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid > .col-1 {
+  grid-column: span 1;
+}
+.grid > .col-2 {
+  grid-column: span 2;
+}
+.grid > .col-3 {
+  grid-column: span 3;
+}
+.grid > .col-4 {
+  grid-column: span 4;
+}
+.grid > .col-5 {
+  grid-column: span 5;
+}
+.grid > .col-6 {
+  grid-column: span 6;
+}
+.grid > .col-7 {
+  grid-column: span 7;
+}
+.grid > .col-8 {
+  grid-column: span 8;
+}
+.grid > .col-9 {
+  grid-column: span 9;
+}
+.grid > .col-10 {
+  grid-column: span 10;
+}
+.grid > .col-11 {
+  grid-column: span 11;
+}
+.grid > .col-12 {
+  grid-column: span 12;
 }
