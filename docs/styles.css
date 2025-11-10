@@ -211,9 +211,11 @@ header {
   padding-bottom: 2rem;
   border-top: 0.1rem solid var(--color-black);
   padding-top: 2rem;
+  margin-top: 2rem;
 }
 
 .section + .section {
   border-top: none;
   padding-top: 0;
+  margin-top: 0;
 }
