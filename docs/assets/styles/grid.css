@@ -1,0 +1,54 @@
+:root {
+  --grid-item-column-span: 1;
+  --grid-columns-count: 12;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns-count), 1fr);
+  grid-column-gap: 0.5rem;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid > .col-1 {
+  --grid-item-column-span: 1;
+}
+.grid > .col-2 {
+  --grid-item-column-span: 2;
+}
+.grid > .col-3 {
+  --grid-item-column-span: 3;
+}
+.grid > .col-4 {
+  --grid-item-column-span: 4;
+}
+.grid > .col-5 {
+  --grid-item-column-span: 5;
+}
+.grid > .col-6 {
+  --grid-item-column-span: 6;
+}
+.grid > .col-7 {
+  --grid-item-column-span: 7;
+}
+.grid > .col-8 {
+  --grid-item-column-span: 8;
+}
+.grid > .col-9 {
+  --grid-item-column-span: 9;
+}
+.grid > .col-10 {
+  --grid-item-column-span: 10;
+}
+.grid > .col-11 {
+  --grid-item-column-span: 11;
+}
+.grid > .col-12 {
+  --grid-item-column-span: 12;
+}
+
+.grid > [class^="col-"] {
+  grid-column: span var(--grid-item-column-span);
+}
