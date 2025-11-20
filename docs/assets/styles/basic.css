@@ -77,7 +77,7 @@ a {
 }
 
 a[href^="http"]::after {
-  content: "↗";
+  content: " ↗";
 }
 
 a:hover {
