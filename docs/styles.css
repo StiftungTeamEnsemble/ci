@@ -52,8 +52,8 @@
 
 .font-box--geist {
   font-family: "Geist", sans-serif;
-  font-weight: 600;
   font-variant-alternates: styleset(alt-l);
+  font-weight: 600;
 }
 
 .font-box--merriweather {
@@ -74,4 +74,13 @@
 }
 .mb--large {
   margin-bottom: var(--size-large);
+}
+
+.font--geist {
+  font-family: "Geist", sans-serif;
+  font-variant-alternates: styleset(alt-l);
+}
+
+.font--no-alt-l {
+  font-variant-alternates: normal;
 }
