@@ -34,30 +34,31 @@
 }
 
 .shade {
-  min-height: 2.5rem;
-
   padding: 0 1rem;
   color: var(--color-white);
+}
+
+.shade-info {
+  min-height: 2.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 0.85rem;
 }
 
+.shade-label {
+  min-height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .shade--dark-text {
   color: var(--color-black);
 }
 
-.shade--base {
-  min-height: 7rem;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 0.25rem;
-  font-size: 1.1rem;
-}
-
 .shade--spacer {
+  min-height: 2.5rem;
   background: transparent;
   border-top: none;
 }

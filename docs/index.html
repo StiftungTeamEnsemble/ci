@@ -161,8 +161,41 @@
         <h2>Farben</h2>
 
         <div id="palette-root" class="palette-grid" aria-live="polite"></div>
+        <script id="palette-template" type="text/x-handlebars-template">
+          {{#each palettes}}
+            <article class="palette-column">
+              <div class="palette-shades">
+                {{#each shades}}
+                  {{#if isSpacer}}
+                    <div class="shade shade--spacer" aria-hidden="true"></div>
+                  {{else}}
+                    <div
+                      class="shade"
+                      style="background-color: {{background}}; color: {{textColor}};"
+                    >
+                      <div class="shade-info">
+                        <span>{{tone}}</span>
+                        <span>{{displayHex}}</span>
+                      </div>
+                      {{#if label}}
+                        <div class="shade-label">
+                          <span>{{label}}</span>
+                        </div>
+                      {{/if}}
+                    </div>
+                  {{/if}}
+                {{/each}}
+              </div>
+            </article>
+          {{/each}}
+        </script>
       </div>
     </main>
+    <!-- Handlebars v4.7.8 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"
+      defer
+    ></script>
     <script src="./assets/scripts/palette.js" defer></script>
   </body>
 </html>

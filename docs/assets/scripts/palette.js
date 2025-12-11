@@ -1,6 +1,7 @@
 (function renderPalette() {
   const paletteRoot = document.querySelector("#palette-root");
-  if (!paletteRoot) return;
+  const templateNode = document.querySelector("#palette-template");
+  if (!paletteRoot || !templateNode || typeof Handlebars === "undefined") return;
 
   const colors = [
     {
@@ -43,46 +44,30 @@
       ? "var(--color-black)"
       : "var(--color-white)";
 
-  const buildColumn = ({ name, base, shades, darkFrom }) => {
-    const article = document.createElement("article");
-    article.className = "palette-column";
+  const paletteData = colors.map(({ name, shades, darkFrom }) => {
+    const slug = name.toLowerCase().replace(/\s+/g, "-");
 
-    const list = document.createElement("div");
-    list.className = "palette-shades";
+    return {
+      name,
+      shades: shades.map((tone) => {
+        if (!tone) return { isSpacer: true };
 
-    shades.forEach((tone) => {
-      if (!tone) {
-        const spacer = document.createElement("div");
-        spacer.className = "shade shade--spacer";
-        spacer.setAttribute("aria-hidden", "true");
-        list.append(spacer);
-        return;
-      }
+        const cssVar = `--color-${slug}-${tone}`;
+        const background = getVarValue(cssVar);
+        const isBase = tone === "500";
 
-      const cssVar = `--color-${name
-        .toLowerCase()
-        .replace(/\s+/g, "-")}-${tone}`;
-      const hex = getVarValue(cssVar);
-      const row = document.createElement("div");
-      row.className = tone === "500" ? "shade shade--base" : "shade";
-      row.style.backgroundColor = hex;
-      row.style.color = textColorForTone(tone, darkFrom);
-
-      const spanTone = document.createElement("span");
-      spanTone.textContent = tone === "500" ? name : tone;
-      const spanHex = document.createElement("span");
-      spanHex.textContent = hex.toUpperCase();
-
-      row.append(spanTone, spanHex);
-      list.append(row);
-    });
-
-    article.append(list);
-    return article;
-  };
-
-  paletteRoot.innerHTML = "";
-  colors.forEach((c) => {
-    paletteRoot.append(buildColumn(c));
+        return {
+          isSpacer: false,
+          label: isBase ? name : null,
+          tone,
+          background,
+          displayHex: background.toUpperCase(),
+          textColor: textColorForTone(tone, darkFrom),
+        };
+      }),
+    };
   });
+
+  const template = Handlebars.compile(templateNode.innerHTML.trim());
+  paletteRoot.innerHTML = template({ palettes: paletteData });
 })();
