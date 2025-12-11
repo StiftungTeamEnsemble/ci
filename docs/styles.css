@@ -35,6 +35,54 @@
   }
 }
 
+.palette-grid {
+  font-family: "Geist", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1rem;
+}
+
+.palette-column {
+  overflow: hidden;
+  background: var(--color-white);
+  display: flex;
+  flex-direction: column;
+}
+
+.palette-shades {
+  display: flex;
+  flex-direction: column;
+}
+
+.shade {
+  min-height: 2.5rem;
+
+  padding: 0 1rem;
+  color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.shade--dark-text {
+  color: var(--color-black);
+}
+
+.shade--base {
+  min-height: 7rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 1.1rem;
+}
+
+.shade--spacer {
+  background: transparent;
+  border-top: none;
+}
+
 .social-media-box {
   aspect-ratio: 1 / 1;
   overflow: hidden;

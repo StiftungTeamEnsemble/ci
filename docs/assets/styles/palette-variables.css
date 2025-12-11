@@ -1,0 +1,52 @@
+:root {
+  /* Pacific Cyan */
+  --color-pacific-cyan-100: #0d4e56;
+  --color-pacific-cyan-200: #11646f;
+  --color-pacific-cyan-300: #136f7b;
+  --color-pacific-cyan-400: #178593;
+  --color-pacific-cyan-500: #1b9aaa;
+  --color-pacific-cyan-600: #21bed2;
+  --color-pacific-cyan-700: #52d3e4;
+  --color-pacific-cyan-800: #9fe7f0;
+  --color-pacific-cyan-900: #d9f5f9;
+
+  /* Bubblegum Pink */
+  --color-bubblegum-pink-100: #7b0b25;
+  --color-bubblegum-pink-200: #a40e31;
+  --color-bubblegum-pink-300: #cc123d;
+  --color-bubblegum-pink-400: #ec1f4f;
+  --color-bubblegum-pink-500: #ef476f;
+  --color-bubblegum-pink-600: #f26f8e;
+  --color-bubblegum-pink-700: #f696ad;
+  --color-bubblegum-pink-800: #facbd6;
+  --color-bubblegum-pink-900: #fef2f5;
+
+  /* Amber Gold */
+  --color-amber-gold-100: #714f00;
+  --color-amber-gold-200: #9e6f00;
+  --color-amber-gold-300: #cb8e00;
+  --color-amber-gold-400: #f8ae00;
+  --color-amber-gold-500: #ffc43d;
+  --color-amber-gold-600: #ffd167;
+  --color-amber-gold-700: #ffde90;
+  --color-amber-gold-800: #ffeaba;
+  --color-amber-gold-900: #fffbf1;
+
+  /* Deep Space Blue */
+  --color-deep-space-blue-300: #1a2c41;
+  --color-deep-space-blue-400: #223954;
+  --color-deep-space-blue-500: #253d5b;
+  --color-deep-space-blue-600: #3d6495;
+  --color-deep-space-blue-700: #648dc0;
+  --color-deep-space-blue-800: #8baacf;
+  --color-deep-space-blue-900: #d8e3ef;
+
+  /* Tropical Mint */
+  --color-tropical-mint-100: #005b44;
+  --color-tropical-mint-200: #008060;
+  --color-tropical-mint-300: #00c896;
+  --color-tropical-mint-400: #00edb2;
+  --color-tropical-mint-500: #00ffbf;
+  --color-tropical-mint-600: #b6ffed;
+  --color-tropical-mint-700: #edfffa;
+}

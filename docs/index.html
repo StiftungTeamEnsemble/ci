@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Corporate Identity</title>
     <link rel="stylesheet" href="./assets/styles/basic.css" />
+    <link rel="stylesheet" href="./assets/styles/palette-variables.css" />
     <link rel="stylesheet" href="./assets/styles/grid.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -159,27 +160,9 @@
       <div class="section">
         <h2>Farben</h2>
 
-        <div class="grid">
-          <div class="col-3">
-            <div class="color-box bg-petrol">
-              <h3>Petrol</h3>
-              <p>#1b9aaa</p>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="color-box bg-yellow">
-              <h3>Gelb</h3>
-              <p>#ffc43d</p>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="color-box bg-magenta">
-              <h3>Magenta</h3>
-              <p>#ef476f</p>
-            </div>
-          </div>
-        </div>
+        <div id="palette-root" class="palette-grid" aria-live="polite"></div>
       </div>
     </main>
+    <script src="./assets/scripts/palette.js" defer></script>
   </body>
 </html>
