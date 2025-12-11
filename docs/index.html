@@ -170,18 +170,18 @@
                     <div class="shade shade--spacer" aria-hidden="true"></div>
                   {{else}}
                     <div
-                      class="shade"
+                      class="{{classes}}"
                       style="background-color: {{background}}; color: {{textColor}};"
                     >
-                      <div class="shade-info">
-                        <span>{{tone}}</span>
-                        <span>{{displayHex}}</span>
-                      </div>
                       {{#if label}}
                         <div class="shade-label">
                           <span>{{label}}</span>
                         </div>
                       {{/if}}
+                      <div class="shade-info">
+                        <span>{{tone}}</span>
+                        <span>{{displayHex}}</span>
+                      </div>
                     </div>
                   {{/if}}
                 {{/each}}

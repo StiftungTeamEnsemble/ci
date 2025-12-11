@@ -1,7 +1,8 @@
 (function renderPalette() {
   const paletteRoot = document.querySelector("#palette-root");
   const templateNode = document.querySelector("#palette-template");
-  if (!paletteRoot || !templateNode || typeof Handlebars === "undefined") return;
+  if (!paletteRoot || !templateNode || typeof Handlebars === "undefined")
+    return;
 
   const colors = [
     {
@@ -63,6 +64,7 @@
           background,
           displayHex: background.toUpperCase(),
           textColor: textColorForTone(tone, darkFrom),
+          classes: isBase ? "shade shade--base" : "shade",
         };
       }),
     };
