@@ -61,7 +61,7 @@
           isSpacer: false,
           label: isBase ? name : null,
           tone,
-          background,
+          cssVar,
           displayHex: background.toUpperCase(),
           textColor: textColorForTone(tone, darkFrom),
           classes: isBase ? "shade shade--base" : "shade",
