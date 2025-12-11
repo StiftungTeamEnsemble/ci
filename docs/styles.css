@@ -14,27 +14,6 @@
   border-top: none;
 }
 
-.bg-petrol {
-  background-color: var(--color-petrol);
-}
-
-.bg-yellow {
-  background-color: var(--color-yellow);
-}
-
-.bg-magenta {
-  background-color: var(--color-magenta);
-}
-
-.color-box {
-  padding: 1rem;
-  color: var(--color-white);
-
-  h3 {
-    margin-top: 0;
-  }
-}
-
 .palette-grid {
   font-family: "Geist", sans-serif;
   display: grid;
