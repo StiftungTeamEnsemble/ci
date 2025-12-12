@@ -161,7 +161,7 @@
         <h2>Farben</h2>
 
         <div id="palette-root" class="palette-grid" aria-live="polite"></div>
-        <script id="palette-template" type="text/x-handlebars-template">
+        <script id="palette-template" type="text/template">
           {{#each palettes}}
             <article class="palette-column">
               <div class="palette-shades">
@@ -191,11 +191,6 @@
         </script>
       </div>
     </main>
-    <!-- Handlebars v4.7.8 -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"
-      defer
-    ></script>
-    <script src="./assets/scripts/palette.js" defer></script>
+    <script type="module" src="./assets/scripts/palette.js" defer></script>
   </body>
 </html>

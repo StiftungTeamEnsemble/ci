@@ -1,9 +1,11 @@
-(function renderPalette() {
-  const paletteRoot = document.querySelector("#palette-root");
-  const templateNode = document.querySelector("#palette-template");
-  if (!paletteRoot || !templateNode || typeof Handlebars === "undefined")
-    return;
+import { template } from "./mini-template.js";
 
+const paletteRoot = document.querySelector("#palette-root");
+const templateNode = document.querySelector("#palette-template");
+
+if (!paletteRoot || !templateNode) {
+  console.warn("Palette root or template is missing, skipping render.");
+} else {
   const colors = [
     {
       name: "Pacific Cyan",
@@ -70,6 +72,6 @@
     };
   });
 
-  const template = Handlebars.compile(templateNode.innerHTML.trim());
-  paletteRoot.innerHTML = template({ palettes: paletteData });
-})();
+  const templateMarkup = templateNode.innerHTML.trim();
+  paletteRoot.innerHTML = template(templateMarkup, { palettes: paletteData });
+}
